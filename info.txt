@@ -1,0 +1,5 @@
+we need to get the info for the api from
+https://developer.accuweather.com/apis
+Then must go to locations API and get the location, then 
+also to the current condition or forecast api for the other 
+information for the location api.

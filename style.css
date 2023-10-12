@@ -12,10 +12,38 @@ body {
     /* justify-content: center; */
     height: 100vh;
     margin: 0;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+}
+
+.container {
+    max-width: 400px;;
+}
+
+.head {
+    text-align: center;
 }
 
 .enter-location {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+    box-shadow: 5px 5px 8px 2px#888888;
+}
+
+.weather-card {
+    /* border-radius: 15px; */
+}
+
+.details {
+    /* border: 1px solid none; */
+    box-shadow: 5px 5px 8px #888888;
+    text-align: center;
 }
