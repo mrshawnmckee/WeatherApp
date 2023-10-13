@@ -38,12 +38,19 @@ body {
     box-shadow: 5px 5px 8px 2px#888888;
 }
 
-.weather-card {
-    /* border-radius: 15px; */
-}
-
 .details {
     /* border: 1px solid none; */
+    background-color: #B0C4DE;
     box-shadow: 5px 5px 8px #888888;
     text-align: center;
 }
+
+/* .three-day {
+    display: flex;
+    justify-content: space-around;
+}
+
+.day-one, .day-two, .day-three {
+    display: flex;
+    align-items: center;
+} */

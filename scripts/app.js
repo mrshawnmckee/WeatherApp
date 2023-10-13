@@ -9,24 +9,32 @@ const updateUI = (data) => {
     const cityDetails = data.cityDetails;
     const cityWeather = data.cityWeather;
 
-    if(cityDetails === ' ') {
-        wet.style.display = 'none'
-    } else {
-    details.innerHTML = `
-        <h5 class="cityName">${cityDetails.EnglishName}</h5>
-        <div class="weather-condition">${cityWeather.WeatherText}</div>
-        <div class="temp">
-            <span>${cityWeather.Temperature.Imperial.Value}</span>
-            <span>&deg;F</span>
-        </div>
-    `
+    let icon
+
+    if(cityWeather.WeatherIcon ===1) {
+        icon = './images/01-s.png';
+    } 
+    else if(cityWeather.WeatherIcon <= 2 && cityWeather.WeatherIcon <= 5 ) {
+        icon = './images/02-s.png';
     }
 
+    details.innerHTML = `
+
+            <h5 class="cityName">${cityDetails.EnglishName}</h5>
+            <div class='icon'><img src="${icon}" alt=""><div>
+            <div class="weather-condition">${cityWeather.WeatherText}</div>
+            <div class="temp">
+                <span>${cityWeather.Temperature.Imperial.Value}</span>
+                <span>&deg;F</span>
+            </div>
+
+    `
 }
 
 const updateCity = async (city) => {
     const cityDetails = await getCity(city);
     const cityWeather = await getCurrentConditions(cityDetails.Key)
+
 
     return { cityDetails, cityWeather }
 }

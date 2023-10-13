@@ -1,5 +1,5 @@
 const key = 'AuNTty2lcVMdqR5tY2ZnRmEqfWlMhSTg';
-
+// Raleigh city key: 329823
 
 
 // id is the city key/ geolocation under the api
@@ -12,6 +12,20 @@ const getCurrentConditions = async (id) => {
 
     return data[0]      //Retuning the object instead od the array, so [0]
 }
+
+
+// // Attempt at creating a three day
+// const getThreeDay = async (id) => {
+//     const base = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/'
+//     const query = `${id}?apikey=${key}`;
+
+//     const response = await fetch(base + query)
+//     const data = await response.json();
+
+//     return data[0]
+
+
+// }
 
 const getCity = async (city) => {
     
@@ -36,5 +50,7 @@ const getCity = async (city) => {
 //   }).then(data => { //This data will be waht is returned from the getCurrentVconditions
 //         console.log(data)
 //   }).catch(err => console.log(err))
+
+
 
 
