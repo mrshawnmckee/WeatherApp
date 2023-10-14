@@ -55,6 +55,7 @@ body {
 
 .cityName {
     font-size: 25px;
+    margin: 10px;
 }
 
 .weather-condition {

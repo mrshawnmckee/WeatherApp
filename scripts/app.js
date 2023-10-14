@@ -62,6 +62,7 @@ const updateUI = (data) => {
 
             <h5 class="cityName">${cityDetails.EnglishName}</h5>
             <div class='icon'><img src="${icon}" alt=""><div>
+            <div class='current'>Current Conditions</div>
             <div class="weather-condition">${cityWeather.WeatherText}</div>
             <div class="temp">
                 <span>${cityWeather.Temperature.Imperial.Value}</span>
