@@ -4,7 +4,7 @@ const key = 'AuNTty2lcVMdqR5tY2ZnRmEqfWlMhSTg';
 
 // id is the city key/ geolocation under the api
 const getCurrentConditions = async (id) => {
-    const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
+    const base = 'https://dataservice.accuweather.com/currentconditions/v1/';
     const query = `${id}?apikey=${key}`;
 
     const response = await fetch(base + query)
@@ -30,7 +30,7 @@ const getCurrentConditions = async (id) => {
 const getCity = async (city) => {
     
     // THis is the link to the api endpoint for city, if using geolocation would have to use that url
-    const base = 'http://dataservice.accuweather.com/locations/v1/cities/search'
+    const base = 'https://dataservice.accuweather.com/locations/v1/cities/search'
 
     // Starts with a '?' because it is a query, the apiKey and q are the requirements form the api endpoint above
     // In this case the q is city, which is passed in through the function from the form input
