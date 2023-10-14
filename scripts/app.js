@@ -4,6 +4,7 @@ const details = document.querySelector('.details')
 const wet = document.querySelector('.weather-condition')
 const cityForm = document.querySelector('form')
 const submitBtn = document.getElementById('submit')
+const type = document.querySelector('.type')
 
 const updateUI = (data) => {
     const cityDetails = data.cityDetails;
@@ -56,12 +57,15 @@ const updateUI = (data) => {
         icon = ''
     }
 
+    // let toggle = false;
+    // let tempType
+    
 
 
     details.innerHTML = `
 
             <h5 class="cityName">${cityDetails.EnglishName}</h5>
-            <div class='icon'><img src="${icon}" alt=""><div>
+            <div class='icon'><img src="${icon}" alt="" class='image'><div>
             <div class='current'>Current Conditions</div>
             <div class="weather-condition">${cityWeather.WeatherText}</div>
             <div class="temp">
@@ -93,3 +97,4 @@ submitBtn.addEventListener('click', e => {
       .catch(err => console.log(err))
 
 })
+
